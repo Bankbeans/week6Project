@@ -261,6 +261,12 @@ app.chartShow = function () {
   });
 };
 
+app.hamburger = function () {
+  $('.nav__hamburger').on('click', function (e) {
+    e.preventDefault();
+    $('nav').slideToggle();
+  });
+};
 //CHART FUNCTION. CREATES CHART ON OUR PAGE
 app.chartSet = function () {
   var ctx = $('#myChart').get(0).getContext("2d");
@@ -271,6 +277,7 @@ app.chartSet = function () {
 app.init = function () {
   app.getData();
   app.chartShow();
+  app.hamburger();
 };
 
 //DOC READY
