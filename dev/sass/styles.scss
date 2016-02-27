@@ -25,15 +25,19 @@
 		li {
 			width: 100%;
 			padding: 5% 0;
+			text-align: center;
 			a {
-				padding: 6% 0;
+				padding: 7% 0;
 				display: inline-block;
-				// height: 100%;
 				width: 100%;
 				font-size: 1.6rem;
 				text-transform: uppercase;
+				background: fade-out($darkblue, 0.3);
 				color: lighten($lightestgreen, 10%);
 				letter-spacing: 2px;
+				&:hover {
+					color: $lightestgreen;
+				}
 			}
 		}
 	}
@@ -68,7 +72,7 @@
 
 .infograph {
 	max-width: 100%;
-	padding: 10% 0;
+	padding: 5% 0;
 	background-color: $blue;
 	background-image: url('../assets/earth.png');
 	background-repeat: no-repeat;
@@ -76,29 +80,29 @@
 	position: relative;
 	h2 {
 		position: absolute;
-		top: 38%;
-		left: 35%;
+		top: 44%;
+		left: 38%;
 	}
 	.infograph__wrapper {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	&__renewableInfo {
-		margin: 0;
-		width: 25%;
-		// height: 200px;
 		display: flex;
 		flex-flow: row wrap;
-		color: $lightestgreen;
-	}
-	&__climateInfo {
-		margin: 0;
-		width: 25%;
-		// height: 200px;
-		display: flex;
-		flex-flow: row wrap;
-		color: $lightestgreen;
-	}
+		justify-content: space-between;
+		&__renewableInfo {
+			margin: 0;
+			width: 25%;
+			display: flex;
+			flex-flow: row wrap;
+			color: $lightestgreen;
+			padding: 2.5%;
+		}
+		&__climateInfo {
+			margin: 0;
+			width: 25%;
+			display: flex;
+			flex-flow: row wrap;
+			color: $lightestgreen;
+			padding: 2%;
+		}
 	}
 }
 
@@ -198,6 +202,7 @@ svg {
 // RESOURCES
 .resources {
 	margin: 0;
+	padding: 4% 0 0 0;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/heroimage.jpg');
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -208,32 +213,70 @@ svg {
 	}
 	h3 {
 		margin: 0;
-		padding: 2% 0;
+		padding: 3% 0 0 0;
+		text-transform: uppercase;
+		letter-spacing: 4px;
+		color: $lightestgreen;
+		font-size: 3.5rem;
 	}
 }
+
 .resources__climateResources__info {
 	width: 60%;
 	margin: 0 auto;
 	padding: 2% 0;
 }
 .resources__climateResources, .resources__renewableResources {
+	background: fade-out($lightestgreen, 0.6);
+	margin-top: 3%;
+	padding: 3% 0;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
 	align-items: center;
-	a img{
-		width: 300px;
-		height: auto;
+	a {
+		img{
+			width: 300px;
+			height: auto;
+		}
+		.imgResize {
+			width: 500px;
+		}
 	}
 }
-.footer__devs {
-	margin: 0 auto;
-	width: 100%;
+
+.resources__renewableResources {
+	&__title {
+		padding-top: 5%;
+	}
+}
+
+.footer__wrapper {
+	padding: 1% 0;
 	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	p {
-		display: inline-block;
-		width: 10%;
+	flex-flow: column wrap;
+	justify-content: space-around;
+	.footer_links {
+		width: 100%;
+		ul {
+			display: flex;
+		}
+	}
+	.footer__devs {
+		width: 100%;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		p {
+			width: 20%;
+		}
+		a {
+			color: $blue;
+			text-transform: uppercase;
+			&:hover {
+				color: $lightestgreen;
+			}
+		}
 	}
 }
+
